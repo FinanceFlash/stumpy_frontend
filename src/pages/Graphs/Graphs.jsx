@@ -21,7 +21,7 @@ const GraphPage = () => {
     const fetchData = async () => {
       try {
         // Fetch stock names
-        const stockNamesResponse = await fetch('http://82.165.211.74/get_stock_data');
+        const stockNamesResponse = await fetch('http://82.165.211.74/get_all_stock_name');
         const stockNamesData = await stockNamesResponse.json();
         // const dataArray = JSON.parse(stockNamesData);
         setStockNames(stockNamesData);
