@@ -21,7 +21,7 @@ const GraphPage = () => {
     const fetchData = async () => {
       try {
         // Fetch stock names
-        const stockNamesResponse = await fetch('http://127.0.0.1:5000/get_all_stock_name');
+        const stockNamesResponse = await fetch('http://82.165.211.74/get_stock_data');
         const stockNamesData = await stockNamesResponse.json();
         // const dataArray = JSON.parse(stockNamesData);
         setStockNames(stockNamesData);
@@ -52,7 +52,7 @@ const GraphPage = () => {
 
     try {
       // Perform POST request here using selectedStock and selectedOption
-      const response = await fetch('http://127.0.0.1:5000/get_stock_data', {
+      const response = await fetch('http://82.165.211.74/get_stock_data', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
