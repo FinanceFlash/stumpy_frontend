@@ -1,6 +1,6 @@
 export const FetchData = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:5000/ohlc_data');
+      const response = await fetch('http://82.165.211.74/ohlc_data');
       const jsonData = await response.json();
       const dataArray = JSON.parse(jsonData);
       return dataArray;      
